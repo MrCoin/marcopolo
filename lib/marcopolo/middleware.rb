@@ -61,7 +61,7 @@ module Marcopolo
 
       headers.to_a.each {|i| resp_hash["\t" + i.first] = i.last }
 
-      response_body = response.respond_to?(:body) ? response.body : response
+      response_body = response.respond_to?(:body) ? response.body : response.first
 
       resp_hash.merge!({
         "Response Body" => response_body
