@@ -18,6 +18,7 @@ By simply including the gem in your Gemfile, your Rails app will automatically s
 
 Configure the logger settings in a Rails initializer like so:
 
+    Marcopolo.options[:enabled] = false # Disabling Marcopolo will not add it as a middleware. Default is true
     Marcopolo.options[:logger] = Logger.new(File.join(Rails.root, 'log', "#{Rails.env}-http-raw.log"))
     Marcopolo.options[:severity] = Logger::Severity::DEBUG
 

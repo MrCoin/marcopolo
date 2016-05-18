@@ -7,7 +7,8 @@ module Marcopolo
   DEFAULT_OPTIONS = {
     logger: DEFAULT_LOGGER,
     severity: Logger::Severity::DEBUG,
-    filter: Proc.new {|request| true }
+    filter: Proc.new {|request| true },
+    enabled: true
   }
 
   class << self
